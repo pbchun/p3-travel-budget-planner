@@ -1,0 +1,58 @@
+.app {
+  text-align: center;
+}
+
+.navbar navbar-default {
+  border-color: #e7e7e7;
+}
+
+.ml-auto {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.2em;
+}
+
+.my-upcoming-trips {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+.my-upcoming-trips li {
+  list-style-type: none;
+  padding-top: 5vh;
+  padding-bottom: 2vh;
+  margin-bottom: 2vh;
+  border: 1px solid darkgray;
+}
+
+.trip-form {
+  width: 400px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 30%;
+  margin-right: 30%;
+}
+  
+.trip-form input {
+  border: 1px solid black;
+}
+
+.footer {
+  background-color: #222;
+  color: white;
+  height: 20px;
+  width: 100%;
+  bottom: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
