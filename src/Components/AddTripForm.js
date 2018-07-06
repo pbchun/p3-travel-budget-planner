@@ -65,6 +65,7 @@ class AddTripForm extends React.Component {
             type="text"
             name="totalExpectedBudget"
             value={this.state.totalExpectedBudget}
+            placeholder="Flights, lodging, car rental/ride share, gas, food, entertainment, etc..."
             onChange={this.handleChange}
           />
           Amount Saved
