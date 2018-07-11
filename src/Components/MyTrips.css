@@ -1,0 +1,30 @@
+.my-upcoming-trips h2 {
+  margin-bottom: 2vh;
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+.my-upcoming-trips li {
+  list-style-type: none;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  margin-bottom: 2vh;
+  border: 1px solid darkgray;
+}
+
+.delete-button {
+  padding-top: 2px;
+  padding-bottom: 2px;
+  margin: auto;
+  margin-top: 1.5vh;
+  width: 8vh;
+  color: danger;
+}
+
+.buttons {
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 2vh;
+}

@@ -1,92 +1,89 @@
 import React from "react";
+import './AddTripForm.css';
 
 class AddTripForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      Destination: "",
-      StartTraveDate: "",
-      EndTravelDate: "",
-      TotalExpectedBudget: ""
+      destination: "",
+      startTravelDate: "",
+      endTravelDate: "",
+      totalExpectedBudget: "",
+      amountSaved: ""
     };
   }
 
-  handleChange = event => {
+  handleChange = (event) => {
     const currentValue = event.target.value;
     const key = event.target.name;
     this.setState({ [key]: currentValue });
   };
 
-  addTrip = event => {
+  handleSubmit = (event) => {
     event.preventDefault();
-    const formData = {
-      Destination: this.state.Destination,
-      StartTravelDate: this.state.StartTraveDate,
-      EndTravelDate: this.state.EndTravelDate,
-      TotalExpectedBudget: this.state.TotalExpectedBudget
-    };
-    this.props.newTrip(formData);
-    this.setState({
-      Destination: "",
-      StartTravelDate: "",
-      EndTravelDate: "",
-      TotalExpectedBudget: ""
-    });
+
+    fetch('https://trip-budget-app.herokuapp.com/mytrips', {
+      method: 'POST',
+      body: JSON.stringify(this.state),
+      headers: new Headers({ "content-type": "application/JSON" })
+    })
+    .then(response => response.json())
+    .then(response => {
+      this.props.listTrips()
+    })
   };
+
 
   render() {
     return (
-      <aside id="side-bar">
+      <div className="add-form">
         <h3>Add a new trip</h3>
-        <form className="trip-form" onSubmit={this.addTrip}>
+        <form className="trip-form" type="submit" onSubmit={this.handleSubmit}>
           Destination
-          <input
-            type="text"
-            name="destination"
-            value={this.state.destination}
-            onChange={this.handleChange}
-          />
+            <input
+              type="text"
+              name="destination"
+              value={this.state.destination}
+              onChange={this.handleChange}
+            />
           Travel Start Date
-          <input
-            type="date"
-            name="startTravelDate"
-            value={this.state.startTravelDate}
-            onChange={this.handleChange}
-          />
+            <input 
+              type="date"
+              name="startTravelDate"
+              value={this.state.startTravelDate}
+              onChange={this.handleChange}
+            />
           Travel End Date
-          <input
-            type="date"
-            name="endTravelDate"
-            value={this.state.endTravelDate}
-            onChange={this.handleChange}
-          />
+            <input
+              type="date"
+              name="endTravelDate"
+              value={this.state.endTravelDate}
+              onChange={this.handleChange}
+            />
           Total Expected Budget
-          <input
-            type="text"
-            name="totalExpectedBudget"
-            value={this.state.totalExpectedBudget}
-            placeholder="Flights, lodging, car rental/ride share, gas, food, entertainment, etc..."
-            onChange={this.handleChange}
-          />
+          
+            <input
+              type="text"
+              name="totalExpectedBudget"
+              value={this.state.totalExpectedBudget}
+              placeholder="Transportation, food, lodging, entertainment, etc..."
+              onChange={this.handleChange}
+            />
           Amount Saved
-          <input
-            type="text"
-            name="amountSaved"
-            value={this.state.amountSaved}
-            onChange={this.handleChange}
-          />
-          Amount To Save
-          <input
-            type="text"
-            name="amountToSave"
-            value={this.state.amountToSave}
-            onChange={this.handleChange}
-          />
-          <input type="submit" name="submit" value="Submit" />
+            <input
+              type="text"
+              name="amountSaved"
+              value={this.state.amountSaved}
+              onChange={this.handleChange}
+            />
+          
+          <button className="submit" type="submit" name="submit" value="Submit">Submit</button>
         </form>
-      </aside>
+
+      </div>
+
     );
   }
-}
+};
 
 export default AddTripForm;

@@ -1,0 +1,24 @@
+.home {
+  margin-top: 5vh;
+  padding-bottom: 8vh;
+}
+
+.home h2 {
+  font-size: 4em;
+  font-weight: bold;
+  margin-bottom: 5vh;
+}
+
+.home p {
+  margin-top: 3vh;
+}
+
+.app-intro {
+  font-size: 2em;
+  margin-left: 30%;
+  margin-right: 30%;
+}
+
+.home-img {
+  height: 53vh;
+}

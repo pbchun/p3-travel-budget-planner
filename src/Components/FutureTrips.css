@@ -1,0 +1,53 @@
+.my-upcoming-trips {
+  align-items: center;
+  margin: auto;
+  padding-left: 20%;
+  padding-right: 20%;
+  height: 100;
+}
+
+.my-upcoming-trips li {
+  list-style-type: none;
+  padding-top: 5vh;
+  padding-bottom: 2vh;
+  margin-bottom: 2vh;
+  border: 1px solid darkgray;
+}
+
+.trip-li {
+  list-style-type: none;
+  padding-top: 5vh;
+  padding-bottom: 2vh;
+  margin-bottom: 2vh;
+  border: 1px solid darkgray;
+}
+
+.add-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+}
+
+.future-trip-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 30vh;
+}
+
+.future-trip-form input {
+  width: 300px;
+  border: 1px solid black;
+  margin-top: 5px;
+  align-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.submit {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2vh;
+  margin-top: 1vh;
+}

@@ -1,0 +1,27 @@
+.add-form {
+  margin-bottom: 3vh;
+}
+
+.trip-form {
+  margin: auto;
+  margin-bottom: 5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.trip-form input {
+  width: 400px;
+  border: 1px solid black;
+  margin-top: 3px;
+  align-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.submit {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1vh;
+}
