@@ -16,7 +16,7 @@
 
 .trip-li {
   list-style-type: none;
-  padding-top: 5vh;
+  padding-top: 2vh;
   padding-bottom: 2vh;
   margin-bottom: 2vh;
   border: 1px solid darkgray;
@@ -43,6 +43,10 @@
   align-content: center;
   margin-left: auto;
   margin-right: auto;
+}
+
+#delete-btn {
+  margin-top: 2vh;
 }
 
 .submit {

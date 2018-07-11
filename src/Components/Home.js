@@ -1,11 +1,5 @@
 import React, { Component } from 'react';
-// import Image from './Background/trip-planning.jpg';
 import './Home.css';
-
-
-// const backgroundImg = {
-//   backgroundImage: "url('./Background/trip-planning.jpg')"
-// }
 
 class Home extends Component {
   render() {

@@ -7,10 +7,10 @@ import './MyTrips.css';
 
 class MyTrips extends Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = { 
       myTripsData: [],
-    }
+    };
   }
 
   listTrips = () => {
@@ -20,26 +20,25 @@ class MyTrips extends Component {
       this.setState({
         myTripsData: data.mytrips
       })
-    })
+    });
   }
 
   componentDidMount() {
-      this.listTrips()
+      this.listTrips();
   }
 
   handleDelete(trip, event) {
     event.preventDefault();
-
     fetch(`https://trip-budget-app.herokuapp.com/mytrips/${trip.id}`, {
       method: 'DELETE'
     })
     .then(data => data.text)
-    const mytrips = this.state.myTripsData.slice()
-    const index = mytrips.indexOf(trip)
+    const mytrips = this.state.myTripsData.slice();
+    const index = mytrips.indexOf(trip);
     mytrips.splice(index, 1)
     this.setState({
       myTripsData: mytrips
-    })
+    });
   }
 
   render() {
@@ -51,22 +50,7 @@ class MyTrips extends Component {
             return (
               <li key={trip.id}>
                 <h2>{trip.destination}</h2>
-
-
-                <h5>{new Intl.DateTimeFormat('en-US', { 
-                      year: 'numeric', 
-                      month: '2-digit', 
-                      day: '2-digit' 
-                  }).format(trip.startTravelDate)}</h5>
-                  
-                  
-                  <h5>{new Intl.DateTimeFormat('en-US', { 
-                      year: 'numeric', 
-                      month: '2-digit', 
-                      day: '2-digit' 
-                  }).format(trip.endTravelDate)}</h5>
-
-
+                <h5>{trip.startTravelDate.toString().slice(0,10)} - {trip.endTravelDate.toString().slice(0,10)}</h5>
                 <h4>Total Expected Budget: ${trip.totalExpectedBudget}</h4>
                 <h4>Amount Saved: ${trip.amountSaved}</h4>
                 <h5>Amount To Save: ${trip.totalExpectedBudget - trip.amountSaved}</h5>

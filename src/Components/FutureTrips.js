@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Button } from 'reactstrap';
 import './FutureTrips.css';
 
 class FutureTrips extends Component {
@@ -61,13 +62,13 @@ class FutureTrips extends Component {
   render() {
     return (
       <section className="my-upcoming-trips">
-        <h2>Trip Destination Wish List</h2>
+        <h2>Future Trips To Plan</h2>
         <ul>
           {this.state.futureTripsData.map(trip => {
             return (
               <li key={trip.id} className="trip-li">
                 <h3>{trip.destination}</h3>
-                <button onClick={this.handleDelete.bind(this, trip)}>Delete</button>
+                <Button id="delete-btn" color="danger" onClick={this.handleDelete.bind(this, trip)}>Delete</Button>
               </li>
             )
           })}

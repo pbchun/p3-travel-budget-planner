@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Button, ModalHeader, ModalBody, ModalFooter, Form, Input } from 'reactstrap';
-import Modal from 'react-modal'
+import Modal from 'react-modal';
 
 class EditBudgetModal extends Component {
   constructor(props) {
@@ -11,7 +11,6 @@ class EditBudgetModal extends Component {
       amountSaved: props.amountSaved,
       modal: false
     };
-
     this.toggle = this.toggle.bind(this);
   }
 
@@ -29,7 +28,7 @@ class EditBudgetModal extends Component {
     const currentValue = event.target.value;
     const key = event.target.name;
     this.setState({ [key]: currentValue });
-  };
+  }
 
   handleSave = (event) => {
     event.preventDefault();
@@ -43,14 +42,13 @@ class EditBudgetModal extends Component {
       headers: new Headers({ "content-type": "application/JSON" })
     })
     .then(response => response.json())
+    .then(() => this.toggle())
     .then(response => {this.props.listTrips()})
   }
 
-
-
   render() {
     return (
-      <div>
+      <div className="budget-modal">
         <Button color="primary" onClick={this.toggle}>Edit This Trip's Budget</Button>
         <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
           <ModalHeader toggle={this.toggle}>Edit Your Budget For {this.state.destination}</ModalHeader>

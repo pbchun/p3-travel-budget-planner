@@ -1,0 +1,10 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  padding-left: 2vh;
+  padding-right: 2vh;
+}
+
+.header img {
+  align-self: center;
+}
