@@ -17,7 +17,7 @@ class AddTripForm extends React.Component {
     const currentValue = event.target.value;
     const key = event.target.name;
     this.setState({ [key]: currentValue });
-  };
+  }
 
   handleSubmit = (event) => {
     event.preventDefault();
@@ -30,8 +30,8 @@ class AddTripForm extends React.Component {
     .then(response => response.json())
     .then(response => {
       this.props.listTrips()
-    })
-  };
+    });
+  }
 
 
   render() {
@@ -84,6 +84,6 @@ class AddTripForm extends React.Component {
 
     );
   }
-};
+}
 
 export default AddTripForm;

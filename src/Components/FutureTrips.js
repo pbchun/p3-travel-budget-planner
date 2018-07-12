@@ -4,11 +4,11 @@ import './FutureTrips.css';
 
 class FutureTrips extends Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = { 
       futureTripsData: [], 
       newFutureTrip: ""
-    }
+    };
   }
 
   listTrips = () => {
@@ -18,11 +18,11 @@ class FutureTrips extends Component {
       this.setState({
         futureTripsData: data.futuretrips
       })
-    })
+    });
   }
 
   componentDidMount() {
-      this.listTrips()
+      this.listTrips();
   }
 
   handleChange = (event) => {
@@ -41,8 +41,8 @@ class FutureTrips extends Component {
     .then(response => response.json())
     .then(response => {
       this.listTrips()
-    })
-  };
+    });
+  }
 
   handleDelete(trip, event) {
     event.preventDefault();
@@ -88,7 +88,7 @@ class FutureTrips extends Component {
           </form>
         </div>
       </section>
-    )
+    );
   }
 }
 

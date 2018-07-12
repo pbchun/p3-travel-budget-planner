@@ -9,7 +9,6 @@ const Header = () => {
       <NavBar />
     </header>
   )
-
 };
 
-export default Header
+export default Header;

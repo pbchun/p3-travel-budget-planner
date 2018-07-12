@@ -43,7 +43,7 @@ class EditBudgetModal extends Component {
     })
     .then(response => response.json())
     .then(() => this.toggle())
-    .then(response => {this.props.listTrips()})
+    .then(response => {this.props.listTrips()});
   }
 
   render() {

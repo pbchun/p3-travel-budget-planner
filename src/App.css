@@ -1,7 +1,6 @@
 .app {
   text-align: center;
   height: 100%;
-  /* bottom: 0; */
 }
 
 .ml-auto {
@@ -10,9 +9,3 @@
   justify-content: space-around;
   font-size: 1.2em;
 }
-
-/* .app {
-  background-image: url("https://www.bostonmagazine.com/wp-content/uploads/sites/2/2015/08/shutterstock_honeymoon-planning.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-} */

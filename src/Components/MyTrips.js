@@ -66,7 +66,7 @@ class MyTrips extends Component {
         </ul>
         <AddTripForm listTrips={this.listTrips}/>
       </section>
-    )
+    );
   }
 }
 

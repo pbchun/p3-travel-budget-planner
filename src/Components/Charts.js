@@ -3,12 +3,6 @@ import { Doughnut } from 'react-chartjs-2';
 import './Charts.css';
 
 class Charts extends Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     chartData: {}
-  //   }
-  // }
   
   render() {
     return (
