@@ -2,7 +2,6 @@ import React from 'react';
 import {Nav, NavItem} from 'react-bootstrap';
 import './NavBar.css';
 
-
 const NavBar = () => {
   return(
     <div>

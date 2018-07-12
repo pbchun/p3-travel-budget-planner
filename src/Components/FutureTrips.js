@@ -31,8 +31,6 @@ class FutureTrips extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    // console.log(this.state.newFutureTrips)
-
     fetch('https://trip-budget-app.herokuapp.com/futuretrips', {
       method: 'POST',
       body: JSON.stringify({destination: this.state.newFutureTrips}),
@@ -46,7 +44,6 @@ class FutureTrips extends Component {
 
   handleDelete(trip, event) {
     event.preventDefault();
-    
     fetch(`https://trip-budget-app.herokuapp.com/futuretrips/${trip.id}`, {
       method: 'DELETE'
     })

@@ -21,7 +21,6 @@ class AddTripForm extends React.Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-
     fetch('https://trip-budget-app.herokuapp.com/mytrips', {
       method: 'POST',
       body: JSON.stringify(this.state),
@@ -32,7 +31,6 @@ class AddTripForm extends React.Component {
       this.props.listTrips()
     });
   }
-
 
   render() {
     return (
@@ -77,7 +75,7 @@ class AddTripForm extends React.Component {
               onChange={this.handleChange}
             />
           
-          <button className="submit" type="submit" name="submit" value="Submit">Submit</button>
+          <button className="submit" type="submit" name="submit" value="Submit">Add Trip</button>
         </form>
 
       </div>
