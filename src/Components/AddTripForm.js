@@ -13,11 +13,7 @@ class AddTripForm extends React.Component {
     };
   }
 
-  handleChange = (event) => {
-    const currentValue = event.target.value;
-    const key = event.target.name;
-    this.setState({ [key]: currentValue });
-  }
+ 
 
   handleSubmit = (event) => {
     event.preventDefault();

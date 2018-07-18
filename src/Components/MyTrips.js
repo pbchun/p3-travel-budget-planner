@@ -38,7 +38,7 @@ class MyTrips extends Component {
     mytrips.splice(index, 1)
     this.setState({
       myTripsData: mytrips
-    });
+    }); 
   }
 
   render() {
